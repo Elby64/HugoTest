@@ -1,0 +1,103 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Procrastination"
+theme = "grid-side"
+copyright = "Copyright &#169; by Me"
+
+SectionPagesMenu = "Main"
+
+[Params]
+    # When set to true, will use infinite scrolling to load paginated content
+    # for posts, galleries, and projects
+    infinite_scroll = true
+
+    [Params.Highlight]
+
+        style = "railscasts"
+
+    [Params.Header]
+
+        # This is optional
+        name = "Just Me"
+
+        # This is optional
+        description = "Procrastination with Hugo"
+
+        # This is optional
+        email = "my@email.com"
+
+        # Not providing this results in a color being used
+        image = "img/green-leaf-plant-beside-brown-electric-guitar-on-sofa-892617.jpg"
+
+    [Params.Footer]
+
+    #
+    # Contains the Cells representing the sections of your website. Each cell
+    # contains the name of the cell, an image depicting what the content
+    # represents, and a link to use when the cell is clicked. 
+    #
+    # Not providing an image will use the color specified by 'color' as the
+    # background color (default to #FFF).
+    #
+    # You can embed an icon using 'icon' to specify the classes to use
+    # for the icon (such as 'fa fa-flag' when using font awesome).
+    #
+    # By default, each cell has a grid size of 1/3 (4 out of 12) for large
+    # screens, 1/2 (6 out of 12) for medium screens, and 1 (12 out of 12) for
+    # small screens. To change the cell's size per screen, use the properties
+    # 'cell_large', 'cell_medium', and 'cell_small' respectively with a number
+    # ranging from 1 to 12. Make sure that Cells have nubmers equalling 12
+    # per row.
+    #
+    [Params.Cells]
+
+        [[Params.Cells.List]]
+
+            # The name to use with the cell, shows up on hover
+            name = "Films"
+
+            # The link to associate with the cell, used when clicked
+            link = "/films/"
+
+            # The image to use as a background-image for the cell
+	    image = "img/abstract-analog-art-camera-390089.jpg"
+
+            # This uses the CSS background-position, given the image above is
+            # set, useful when you want to adjust where the background-image
+            # lands
+            #image_position = "top"
+
+            # The color to use as a fallback if an image is not provided
+            color = "blue"
+
+            # Grays out the image (if provided), the image will be restored
+            # to normal color on hover
+            grayscale = true
+
+            # Disables the normal cell highlight on hover
+            #no_highlight = true
+            
+            # Normally, a cell only shows text (its name) on hover, setting
+            # this to true results in the cell always showing its text
+            # and also using a dark overlay to make the white text be more
+            # visible
+            #always_show_text = true
+
+            # Grays out the cell and disables click functionality on it
+            #disable = true
+
+        [[Params.Cells.List]]
+
+            name = "Series"
+            link = "series/"
+            grayscale = true
+	    image = "img/abandoned-antique-close-up-design-333984.jpg"
+
+        [[Params.Cells.List]]
+
+            name = "Music"
+            link = "music/"
+            grayscale = true
+	    image = "img/black-vinyl-record-playing-on-turntable-1389429.jpg"
+
+

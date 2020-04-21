@@ -1,0 +1,43 @@
+{{ partial "core/html-start.html" . }}
+{{ partial "core/head.html" . }}
+{{ $baseURL := .Site.BaseURL }}
+
+<body class="page-colors minimum-viewport-height">
+    {{ partial "core/main-menu.html" . }}
+
+    <div class="main-content">
+        <div class="center-space">
+            <div class="project-article article-colors">
+	      {{ with .Params.image }}
+	      <div class="project-img">
+	          <img src="{{ $baseURL }}{{ . }}" class="fill-container-width"></img>
+	      </div>
+	      {{ end }}
+	      <div class="project-content">
+                <article>
+                  <header>
+                      <h1 class="article-title">{{ .Title }}</h1>
+		      {{ if .Params.catecategcategorieeies }} {{ partial "extra/categories.html" . }} {{ end }}
+		      {{ if .Params.tags }} <span class="separator">|</span> {{ partial "extra/tags.html" . }} {{ end }}
+                  </header>
+                  <hr>
+                  <section>
+		      {{ .Content }}
+                  </section>
+		  
+		  <ul class="single-footer">
+		      <li> {{with .NextInSection}} <a href="{{.Permalink}}" title="{{.Title}} (AccessKey P)" accesskey="p"> &#x21E6; Previous</a>{{end}} </li>
+		      <li> </li>
+		      <li> {{with .PrevInSection}} <a href="{{.Permalink}}"  title="{{.Title}} (AccessKey N)" accesskey="n">Next &#x21E8; </a>{{end}} </li>
+                  </ul>
+                </article>
+	      </div>
+            </div>
+        </div>
+    </div>
+
+    {{ partial "core/js.html" . }}
+</body>
+
+{{ partial "core/html-end.html" . }}
+
