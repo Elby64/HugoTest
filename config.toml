@@ -6,6 +6,11 @@ copyright = "Copyright &#169; by Me"
 
 SectionPagesMenu = "Main"
 
+
+[permalinks]
+    tags = "/tags/:slug"
+    post = "/:section/:year/:month/:day/:title"
+
 [Params]
     # When set to true, will use infinite scrolling to load paginated content
     # for posts, galleries, and projects
